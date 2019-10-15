@@ -20,8 +20,17 @@ namespace ChuckNorrisWinForm
 
         private async void btnGenerateJoke_Click(object sender, EventArgs e)
         {
-            Joke joke = await ChuckNorrisClient.GetRandomJoke();
+             Joke joke = await ChuckNorrisClient.GetRandomJoke();
             DisplayJoke.Text = joke.JokeText;
+        }
+
+        private async void Form1_Load(object sender, EventArgs e)
+        {
+            IEnumerable<string> category = await ChuckNorrisClient.GetCategories();
+            foreach(var c in category)
+            {
+                cboGetCategory.Items.Add(c);
+            }
         }
     }
 }

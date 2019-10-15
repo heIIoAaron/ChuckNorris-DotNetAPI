@@ -30,11 +30,12 @@
         {
             this.btnGenerateJoke = new System.Windows.Forms.Button();
             this.DisplayJoke = new System.Windows.Forms.ListBox();
+            this.cboGetCategory = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnGenerateJoke
             // 
-            this.btnGenerateJoke.Location = new System.Drawing.Point(118, 334);
+            this.btnGenerateJoke.Location = new System.Drawing.Point(118, 369);
             this.btnGenerateJoke.Name = "btnGenerateJoke";
             this.btnGenerateJoke.Size = new System.Drawing.Size(186, 47);
             this.btnGenerateJoke.TabIndex = 0;
@@ -50,15 +51,26 @@
             this.DisplayJoke.Size = new System.Drawing.Size(244, 186);
             this.DisplayJoke.TabIndex = 1;
             // 
+            // cboGetCategory
+            // 
+            this.cboGetCategory.FormattingEnabled = true;
+            this.cboGetCategory.Location = new System.Drawing.Point(118, 302);
+            this.cboGetCategory.Name = "cboGetCategory";
+            this.cboGetCategory.Size = new System.Drawing.Size(186, 21);
+            this.cboGetCategory.TabIndex = 2;
+            this.cboGetCategory.Text = "Joke Category";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(433, 474);
+            this.Controls.Add(this.cboGetCategory);
             this.Controls.Add(this.DisplayJoke);
             this.Controls.Add(this.btnGenerateJoke);
             this.Name = "Form1";
             this.Text = "Chuck Norris Jokes";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
@@ -67,6 +79,7 @@
 
         private System.Windows.Forms.Button btnGenerateJoke;
         private System.Windows.Forms.ListBox DisplayJoke;
+        private System.Windows.Forms.ComboBox cboGetCategory;
     }
 }
 
