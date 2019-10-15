@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ChuckNorrisAPI;
 
 namespace ChuckNorrisWinForm
 {
@@ -15,6 +16,12 @@ namespace ChuckNorrisWinForm
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private async void btnGenerateJoke_Click(object sender, EventArgs e)
+        {
+            Joke joke = await ChuckNorrisClient.GetRandomJoke();
+            DisplayJoke.Text = joke.JokeText;
         }
     }
 }

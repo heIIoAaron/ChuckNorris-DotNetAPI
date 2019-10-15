@@ -40,6 +40,7 @@
             this.btnGenerateJoke.TabIndex = 0;
             this.btnGenerateJoke.Text = "Chuck Norris Joke";
             this.btnGenerateJoke.UseVisualStyleBackColor = true;
+            this.btnGenerateJoke.Click += new System.EventHandler(this.btnGenerateJoke_Click);
             // 
             // DisplayJoke
             // 
